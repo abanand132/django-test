@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "app/css/style.css" %}">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div class="mb-2">
+        {% for obj in list %}
+            <h3>{{obj}}</h3>
+            <img src="{{obj.profiles.profile.url}}" alt="" 
+            width="200px" height=auto>
+        {% endfor %}
+    </div>
+</body>
+</html>
